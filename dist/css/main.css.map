@@ -1,0 +1,1 @@
+{"version":3,"file":"./css/main.css","mappings":";;;AAGA;EACE,UAJS;EAKT,iBAJW;EAKX,gBAAgB;EAChB,yDAAmC","sources":["webpack:///./style.scss"],"sourcesContent":["$color: red;\n$weight: bold;\n\nbody {\n  color: $color;\n  font-weight: $weight;\n  background: #EEE;\n  background-image: url('img/04.jpg');\n\n}"],"names":[],"sourceRoot":""}
