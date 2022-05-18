@@ -1,0 +1,321 @@
+<!-- 変数名の設定 -->
+<% let pageId = 'lineup'; %>
+<%- include('./_header', { pageId: pageId }) %>
+
+<body class="drawer drawer--right" id="<% if (pageId === 'lineup'){ %>lineup<% } else { %>newspage<% } %>">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTXH7Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="main__wrapper">
+
+        <%- include('./_mainpc', { pageId: pageId }) %>
+        <div class="main">
+
+            <main>
+                <%- include('./_headersp', { pageId: pageId }) %>
+
+
+                <section class="lineuptop" id="lineuptop">
+                    <div class="lineuptop__inner">
+                        <div class="lineuptop__imgblc">
+                            <figure class="lineuptop__img01 fuwanime">
+                                <img src="../img/img_lineuptop01.png" alt="LINE UP IMAGE01">
+                            </figure>
+                            <figure class="lineuptop__img02 fuwanime">
+                                <img src="../img/img_lineuptop02.png" alt="LINE UP IMAGE03">
+                            </figure>
+                            <figure class="lineuptop__img03 fuwanimeT">
+                                <img src="../img/img_lineuptop03.png" alt="LINE UP IMAGE03">
+                            </figure>
+                            <figure class="lineuptop__img04 fuwanimeT">
+                                <img src="../img/img_lineuptop04.png" alt="LINE UP IMAGE04">
+                            </figure>
+                        </div>
+                        <h2 class="lineuptop__ttl">LINE UP</h2>
+                        <p class="lineuptop__star fuwanime">Star</p>
+                        <p class="lineuptop__txt">LOUERのあか抜けレンズは全部で4種類。ファッションライバーももちの選ぶおすすめコーディネートと一緒に楽しんで。</p>
+                    </div>
+                </section>
+
+
+                <section class="lineup lineup01" id="lineup01">
+                    <span class="lineup01__bg01"></span>
+                    <span class="lineup01__bg02"></span>
+                    <span class="lineup01__star fuwa02"></span>
+                    <div class="lineup__inner">
+                        <h3 class="lineup01__num">01</h3>
+                        <p class="lineup01__subname">ミスユーブラウン</p>
+
+                        <div class="lineup__blc">
+                            <figure class="lineup__img">
+                                <img src="../img/img01_line.png" alt="ミスユーブラウン">
+                            </figure>
+                            <span class="lineup01__name fuwanime">01 MISS YOU BROWN</span>
+                        </div>
+
+                        <div class="lineup__lenz">
+                            <div class="lineup__lenz--txts">
+                                <p class="lineup__lenz--feature">裸眼より綺麗に見える<br>
+                                    絶妙なナチュラルブラウン</p>
+                                <p class="lineup__lenz--dia">着色直径 <span>13.6</span>mm</p>
+                            </div>
+                            <figure class="lineup__lenz--img">
+                                <img src="../img/img_itemLenz01.png" alt="01 MISS YOU BROWN">
+                            </figure>
+                        </div>
+
+                        <img src="../img/star.svg" alt="star" class="lineup__star fuwanime">
+                        <h3 class="lineup__subttl">装用イメージ</h3>
+
+                        <div class="swiperLine">
+                            <div class="swiper lineSwiper01">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz01a.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz01b.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="lineup__cordinate lineup01__cordinate" id="lineup01__cordinate">
+                            <img src="../img/star_cordinate.svg" alt="star" class="lineup__cordinate--star fuwanime">
+                            <h3 class="lineup__cordinate--ttl">Momochi’s recommend Coordinate おすすめコーディネート</h3>
+
+                            <p class="lineup01__cordinate--feature01 fuwa01">デート</p>
+                            <figure class="lineup01__cordinate--figure01">
+                                <img src="../img/figure01_cordinate01.png" alt="01 デート">
+                            </figure>
+
+
+                            <p class="lineup01__cordinate--feature02 fuwa02">大人っぽ</p>
+                            <figure class="lineup01__cordinate--figure02">
+                                <img src="../img/figure02_cordinate01.png" alt="02 大人っぽ">
+                            </figure>
+
+                            <p class="lineup01__cordinate--feature03 fuwa03">女子会</p>
+                            <figure class="lineup01__cordinate--figure03">
+                                <img src="../img/figure03_cordinate01.png" alt="03 女子会">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="lineup lineup02" id="lineup02">
+                    <span class="lineup02__bg01"></span>
+                    <span class="lineup02__bg02"></span>
+                    <span class="lineup02__star fuwa02"></span>
+                    <div class="lineup__inner">
+                        <h3 class="lineup02__num">02</h3>
+                        <p class="lineup02__subname">ハグミーベージュ</p>
+
+                        <div class="lineup__blc">
+                            <figure class="lineup__img">
+                                <img src="../img/img02_line.png" alt="ハグミーベージュ">
+                            </figure>
+                            <span class="lineup02__name fuwanime">02 HUG ME BEIGE</span>
+                        </div>
+
+                        <div class="lineup__lenz">
+                            <div class="lineup__lenz--txts">
+                                <p class="lineup__lenz--feature">ほんのりベージュ味のある<br>
+                                    ブラウンで優しい瞳に</p>
+                                <p class="lineup__lenz--dia">着色直径 <span>13.4</span>mm</p>
+                            </div>
+                            <figure class="lineup__lenz--img">
+                                <img src="../img/img_itemLenz02.png" alt="02 HUG ME BEIGE">
+                            </figure>
+                        </div>
+
+                        <img src="../img/star.svg" alt="star" class="lineup__star fuwanime">
+                        <h3 class="lineup__subttl">装用イメージ</h3>
+
+                        <div class="swiperLine">
+                            <div class="swiper lineSwiper01">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz02a.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz02b.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="lineup__cordinate lineup02__cordinate" id="lineup02__cordinate">
+                            <img src="../img/star_cordinate.svg" alt="star" class="lineup__cordinate--star fuwanime">
+                            <h3 class="lineup__cordinate--ttl">Momochi’s recommend Coordinate おすすめコーディネート</h3>
+
+                            <p class="lineup02__cordinate--feature01 fuwa01">デート</p>
+                            <figure class="lineup02__cordinate--figure01">
+                                <img src="../img/figure01_cordinate02.png" alt="01 デート">
+                            </figure>
+
+
+                            <p class="lineup02__cordinate--feature02 fuwa02">大人っぽ</p>
+                            <figure class="lineup02__cordinate--figure02">
+                                <img src="../img/figure02_cordinate02.png" alt="02 大人っぽ">
+                            </figure>
+
+                            <p class="lineup02__cordinate--feature03 fuwa03">女子会</p>
+                            <figure class="lineup02__cordinate--figure03">
+                                <img src="../img/figure03_cordinate02.png" alt="03 女子会">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <section class="lineup lineup03" id="lineup03">
+                    <span class="lineup03__bg01"></span>
+                    <span class="lineup03__bg02"></span>
+                    <span class="lineup03__star fuwa02"></span>
+                    <div class="lineup__inner">
+                        <h3 class="lineup03__num">03</h3>
+                        <p class="lineup03__subname">ラブキャメル</p>
+
+                        <div class="lineup__blc">
+                            <figure class="lineup__img">
+                                <img src="../img/img03_line.png" alt="ラブキャメル">
+                            </figure>
+                            <span class="lineup03__name fuwanime">03 LOVE CAMEL</span>
+                        </div>
+
+                        <div class="lineup__lenz">
+                            <div class="lineup__lenz--txts">
+                                <p class="lineup__lenz--feature">馴染みの良いキャメルで<br>
+                                    ほんのり瞳をトーンアップ</p>
+                                <p class="lineup__lenz--dia">着色直径 <span>13.6</span>mm</p>
+                            </div>
+                            <figure class="lineup__lenz--img">
+                                <img src="../img/img_itemLenz03.png" alt="03 LOVE CAMEL">
+                            </figure>
+                        </div>
+
+                        <img src="../img/star.svg" alt="star" class="lineup__star fuwanime">
+                        <h3 class="lineup__subttl">装用イメージ</h3>
+
+                        <div class="swiperLine">
+                            <div class="swiper lineSwiper01">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz03a.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz03b.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="lineup__cordinate lineup03__cordinate" id="lineup03__cordinate">
+                            <img src="../img/star_cordinate.svg" alt="star" class="lineup__cordinate--star fuwanime">
+                            <h3 class="lineup__cordinate--ttl">Momochi’s recommend Coordinate おすすめコーディネート</h3>
+
+                            <p class="lineup03__cordinate--feature01 fuwa01">デート</p>
+                            <figure class="lineup03__cordinate--figure01">
+                                <img src="../img/figure01_cordinate03.png" alt="01 デート">
+                            </figure>
+
+
+                            <p class="lineup03__cordinate--feature02 fuwa02">大人っぽ</p>
+                            <figure class="lineup03__cordinate--figure02">
+                                <img src="../img/figure02_cordinate03.png" alt="02 大人っぽ">
+                            </figure>
+
+                            <p class="lineup03__cordinate--feature03 fuwa03">女子会</p>
+                            <figure class="lineup03__cordinate--figure03">
+                                <img src="../img/figure03_cordinate03.png" alt="03 女子会">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lineup lineup04" id="lineup04">
+                    <span class="lineup04__bg01"></span>
+                    <span class="lineup04__bg02"></span>
+                    <span class="lineup04__star fuwa02"></span>
+                    <div class="lineup__inner">
+                        <h3 class="lineup04__num">04</h3>
+                        <p class="lineup04__subname">チェリッシュピンク</p>
+
+                        <div class="lineup__blc">
+                            <figure class="lineup__img">
+                                <img src="../img/img04_line.png" alt="チェリッシュピンク">
+                            </figure>
+                            <span class="lineup04__name fuwanime">04 CHERISH PINK</span>
+                        </div>
+
+                        <div class="lineup__lenz">
+                            <div class="lineup__lenz--txts">
+                                <p class="lineup__lenz--feature">使いやすさにこだわった<br>
+                                    甘すぎないピンクカラー</p>
+                                <p class="lineup__lenz--dia">着色直径 <span>13.6</span>mm</p>
+                            </div>
+                            <figure class="lineup__lenz--img">
+                                <img src="../img/img_itemLenz04.png" alt="04 CHERISH PINK">
+                            </figure>
+                        </div>
+
+                        <img src="../img/star.svg" alt="star" class="lineup__star fuwanime">
+                        <h3 class="lineup__subttl">装用イメージ</h3>
+
+                        <div class="swiperLine">
+                            <div class="swiper lineSwiper01">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz04a.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="../img/img_lineupLenz04b.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="lineup__cordinate lineup04__cordinate" id="lineup04__cordinate">
+                            <img src="../img/star_cordinate.svg" alt="star" class="lineup__cordinate--star fuwanime">
+                            <h3 class="lineup__cordinate--ttl">Momochi’s recommend Coordinate おすすめコーディネート</h3>
+
+                            <p class="lineup04__cordinate--feature01 fuwa01">デート</p>
+                            <figure class="lineup04__cordinate--figure01">
+                                <img src="../img/figure01_cordinate04.png" alt="01 デート">
+                            </figure>
+
+
+                            <p class="lineup04__cordinate--feature02 fuwa02">大人っぽ</p>
+                            <figure class="lineup04__cordinate--figure02">
+                                <img src="../img/figure02_cordinate04.png" alt="02 大人っぽ">
+                            </figure>
+
+                            <p class="lineup04__cordinate--feature03 fuwa03">女子会</p>
+                            <figure class="lineup04__cordinate--figure03">
+                                <img src="../img/figure03_cordinate04.png" alt="03 女子会">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <%- include('./_explain', { pageId: pageId }) %>
+
+
+                <%- include('./_shop', { pageId: pageId }) %>
+
+
+
+            </main>
+            <%- include('./_footer', { pageId: pageId }) %>
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.drawer').drawer();
+            $('.drawer-nav').on('click', function () {
+                $('.drawer').drawer('close');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

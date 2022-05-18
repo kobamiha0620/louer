@@ -1,0 +1,5 @@
+
+    AuthType Basic
+    AuthName "IDとPASSを入力"
+    AuthUserFile "/data/webservice/iosystem_pia/http/static/louer.jp/pc/.htpasswd"
+    require valid-user

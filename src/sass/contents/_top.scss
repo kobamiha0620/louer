@@ -1,0 +1,1262 @@
+@charset "utf-8";
+@use "../reset";
+@use "../base";
+@use '../mixin'as mx;
+
+
+.top {
+    background: url(base.$PATH + 'bg_top.png') no-repeat 0 0;
+    background-size: 100% auto;
+    width: 100%;
+    margin-top: -1px;
+
+    &__inner {
+        border-right: solid 1px base.$BG;
+        border-left: solid 1px base.$BG;
+        margin: 0 5%;
+        margin-top: -1px;
+        border-top: solid 1px base.$BC;
+        padding-bottom: 6.66vw;
+
+    }
+
+    &__blc {
+        width: 100%;
+    }
+
+    &__ttl {
+        text-align: center;
+        font-size: 0;
+        line-height: 0;
+        @include mx.bg('ttl_top.png');
+        width: 52vw;
+        height: 31.2vw;
+        margin: 8.3vw auto 5.6vw;
+
+    }
+
+    &__items {
+        overflow: hidden;
+        margin: 6.4vw 11.86vw 0 11.86vw;
+
+        li {
+            float: left;
+            position: relative;
+            width: 29vw;
+            margin-bottom: 5.6vw;
+
+            &:nth-child(2n) {
+                float: right;
+                margin: 0 2vw 5.6vw 0;
+            }
+        }
+
+        &--img {
+            position: absolute;
+            right: -2.13vw;
+            bottom: -2.26vw;
+            width: 9.86vw;
+            height: 9.86vw;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__features {
+        display: flex;
+        justify-content: center;
+        margin: 2vw 5vw 0;
+
+        li {
+            display: inline-block;
+            border-radius: 4px;
+            width: 18vw;
+            max-width: 18vw;
+            border: solid 1px base.$BG;
+            color: base.$BG;
+            @include mx.fz(12);
+            margin-right: 1.3vw;
+            text-align: center;
+            padding: 1vw 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: base.$PCW) {
+
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        &__inner {
+            padding-bottom: 32px;
+
+        }
+
+        &__ttl {
+            width: 250px;
+            height: 150px;
+            margin: 40px auto 27px;
+        }
+
+        &__items {
+            margin: 30px 56px 0;
+
+            li {
+                width: 140px;
+                margin-bottom: 27px;
+
+                &:nth-child(even) {
+                    margin: 0 10px 27px 0;
+                }
+            }
+
+            &--img {
+                right: -10px;
+                bottom: -11px;
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        &__features {
+            margin: 16px 24px 0;
+
+            li {
+                width: 90px;
+                max-width: 90px;
+                margin-right: 6px;
+                text-align: center;
+                padding: 6px 0;
+            }
+        }
+    }
+}
+
+
+.shop {
+    padding: 12.8vw 5vw 0;
+
+    &__ttl {
+        @include mx.bg('ttl_shop.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+
+    &__links {
+        padding: 0 5vw 12.8vw;
+        border-bottom: solid 1px base.$BC;
+
+        li {
+            margin: 0 0 4.3vw;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                background: base.$RED;
+                color: base.$BG;
+                text-decoration: none;
+                border-radius: 9vw;
+                padding: 4.6vw 6.3vw;
+                align-items: center;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &.disable {
+                    opacity: 0.3;
+                }
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &--name {
+            font-weight: normal;
+            line-height: 1;
+            @include mx.fz(15);
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+
+            b {
+                font-weight: bold;
+                display: inline-block;
+                padding-bottom: 2px;
+                border-bottom: solid 1px base.$BG;
+            }
+        }
+
+        &--arrow {
+            transform: scale(0.8, 1);
+            @include mx.fz(18);
+            font-weight: bold;
+            font-family: 'Work Sans';
+            line-height: 1;
+        }
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        padding: 60px 24px 0;
+
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        &__ttl {
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+
+        &__links {
+            padding: 0 24px 60px;
+
+            li {
+                margin: 0 0 20px;
+
+                a {
+                    border-radius: 30px;
+                    padding: 22px 30px;
+                }
+            }
+        }
+    }
+
+}
+
+.campaign {
+    padding: 12.8vw 5vw;
+
+    &__ttl {
+        @include mx.bg('ttl_campain.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+
+    &__inner {
+        border-bottom: solid 1px base.$BC;
+        padding-bottom: 11.73vw;
+    }
+
+    &__link {
+        display: block;
+        margin: 0 0 30px;
+
+        &--date {
+            @include mx.fz(14);
+            text-decoration: none;
+            margin: 0 0 6px;
+        }
+
+        &--text {
+            @include mx.fz(16);
+            text-decoration: underline;
+            line-height: 1.5;
+            margin-top: 6px;
+        }
+
+        p {
+            color: base.$BC;
+            font-weight: normal;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        padding: 60px 24px;
+
+        &__ttl {
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+
+        &__inner {
+            padding-bottom: 56px;
+        }
+    }
+}
+
+
+.concept {
+    padding-bottom: 23vw;
+    background: url('../img/bg_concept.png') no-repeat;
+    background-size: 100% auto;
+    background-position-y: 62vw;
+
+    &__ttl {
+        @include mx.bg('ttl_concept.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+
+    &__subttl {
+        margin: 0 0 4.6vw;
+
+        span {
+            @include mx.bg('suttl_concept01.png');
+            width: 69.7vw;
+            height: 7.6vw;
+            margin: 0 auto;
+        }
+    }
+
+    &__subjp {
+        margin: 0 0 8.13vw;
+
+        span {
+            @include mx.bg('suttl_concept02.png');
+            width: 59vw;
+            height: 4vw;
+            margin: 0 auto;
+        }
+    }
+
+    &__mainimg {
+        margin: 0 10.66vw 6.66vw;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__star {
+        margin: 0 auto 5.9vw;
+        @include mx.bg('figure_pctop.png');
+        width: 8.8vw;
+        height: 8.8vw;
+    }
+
+    &__txt01 {
+        @include mx.bg('txt01_concept.png');
+        margin: 0 auto 10vw;
+        height: 3.6vw;
+        width: 73.8vw;
+    }
+
+    &__txt02 {
+        @include mx.bg('txt02_concept.png');
+        margin: 0 auto 10vw;
+        height: 10.8vw;
+        width: 73.8vw;
+    }
+
+    &__txt03 {
+        @include mx.bg('txt03_concept.png');
+        margin: 0 auto 10vw;
+        height: 10.8vw;
+        width: 73.8vw;
+    }
+
+    &__txt04 {
+        @include mx.bg('txt04_concept.png');
+        margin: 0 auto 16.2vw;
+        height: 3.6vw;
+        width: 73.8vw;
+    }
+
+    &__images {
+        margin: 0 5vw;
+        position: relative;
+        height: 109.6vw;
+
+        &--img01 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 52.8vw;
+            height: 61.3vw;
+        }
+
+        &--img02 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 52.8vw;
+            height: 41.8vw;
+        }
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        padding-bottom: 110px;
+        background-position-y: 297px;
+
+        &__ttl {
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+
+        &__subttl {
+            margin: 0 0 21px;
+
+            span {
+                width: 335px;
+                height: 37px;
+            }
+        }
+
+        &__subjp {
+            margin: 0 0 39px;
+
+            span {
+                width: 283px;
+                height: 20px;
+            }
+        }
+
+        &__mainimg {
+            margin: 0 51px 32px;
+        }
+
+        &__star {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto 28px;
+
+        }
+
+        &__txt01 {
+            margin: 0 auto 48px;
+            height: 17px;
+            width: 354px;
+        }
+
+        &__txt02 {
+            margin: 0 auto 48px;
+            height: 52px;
+            width: 354px;
+        }
+
+        &__txt03 {
+            margin: 0 auto 48px;
+            height: 52px;
+            width: 354px;
+        }
+
+        &__txt04 {
+            margin: 0 auto 78px;
+            height: 17px;
+            width: 354px;
+        }
+
+        &__images {
+            margin: 0 24px;
+            height: 526px;
+
+            &--img01 {
+                width: 253px;
+                height: 294px;
+            }
+
+            &--img02 {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 253px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+// LINEUP
+.topitems {
+    &__ttl {
+        @include mx.bg('ttl_lineup.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+
+    &__inner {
+        position: relative;
+        width: 88vw;
+        margin: 0 auto;
+    }
+
+    &__num {
+        font-family: 'Work Sans';
+        font-size: 4.26vw;
+        line-height: 1;
+        color: base.$BG;
+        margin-bottom: 3.8vw;
+    }
+
+    &__img {
+        width: 26.4vw;
+        height: 26.4vw;
+        position: absolute;
+        right: 0;
+        top: 5.8vw;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        color: base.$BG;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-size: 3.46vw;
+        line-height: 1;
+        margin: 0 0 5.86vw;
+    }
+
+    &__feature {
+        color: base.$BG;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-size: 4vw;
+        line-height: 1.6;
+        margin: 0 0 6vw;
+    }
+
+    &__blc {
+        display: flex;
+        width: 100%;
+        align-items: end;
+        margin: 0 0 8.6vw;
+
+        &--img {
+            max-width: 89vw;
+            width: 89vw;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &--txt {
+            display: flex;
+            justify-content: center;
+            max-width: 11vw;
+            width: 11vw;
+
+            &01 {
+                @include mx.bg('dia_items01.png');
+                width: 2vw;
+                height: 16.5vw;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        padding: 5.3vw 0;
+        border: solid 1px #fbf8f0;
+        border-radius: 30vw;
+        justify-content: center;
+        width: 78vw;
+        margin: 0 auto;
+
+        span {
+            color: #fbf8f0;
+        }
+
+        &--txt {
+            line-height: 1;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            @include mx.fz(15);
+
+        }
+
+        &--arrow {
+            transform: scale(0.8, 1);
+            @include mx.fz(18);
+            font-weight: bold;
+            font-family: 'Work Sans';
+            line-height: 1;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__clenz {
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+
+        &--ttl {
+            text-align: center;
+            color: base.$BG;
+            line-height: 1;
+            @include mx.fz(14);
+            margin-bottom: 23px;
+        }
+
+    }
+
+    &01 {
+        padding: 17vw 0 12.6vw;
+        background-color: base.$cz01;
+
+        &__ttl {
+            @include mx.bg('ttl_01brown.png');
+            width: 57.7vw;
+            height: 22.7vw;
+            margin: 0 0 4.3vw;
+
+        }
+    }
+
+    &02 {
+        padding: 13vw 0 12.6vw;
+        background-color: base.$cz02;
+
+        &__ttl {
+            @include mx.bg('ttl_02beige.png');
+            width: 49.5vw;
+            height: 22.7vw;
+            margin: 0 0 4.3vw;
+        }
+    }
+
+    &03 {
+        padding: 13vw 0 12.6vw;
+        background-color: base.$cz03;
+
+        &__ttl {
+            @include mx.bg('ttl_03camel.png');
+            width: 43.7vw;
+            height: 22.7vw;
+            margin: 0 0 4.3vw;
+        }
+    }
+
+    &04 {
+        padding: 13vw 0 12.6vw;
+        background-color: base.$cz04;
+
+        &__ttl {
+            @include mx.bg('ttl_04pink.png');
+            width: 53.46vw;
+            height: 22.7vw;
+            margin: 0 0 4.3vw;
+        }
+    }
+
+    .swiper {
+        width: 89.3vw;
+        position: relative;
+        margin: 0 auto 10.2vw;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            padding: 0 7.5vw;
+        }
+    }
+
+    .swiper-button-prev {
+        @include mx.bg('prev_clenz.png');
+        width: 4.33vw;
+        height: 4.33vw;
+
+    }
+
+    .swiper-button-next {
+        @include mx.bg('next_clenz.png');
+        width: 4.33vw;
+        height: 4.33vw;
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        &__ttl {
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+
+        &__num {
+            margin-bottom: 18px;
+            @include mx.fz(16);
+        }
+
+        &__inner {
+            width: 432px;
+            margin: 0 5%;
+        }
+
+        &__img {
+            width: 127px;
+            height: 127px;
+            right: 0;
+            top: 28px;
+        }
+
+        &__name {
+            font-size: 16px;
+            margin: 0 0 28px;
+        }
+
+        &__feature {
+            font-size: 18px;
+            margin: 0 0 29px;
+        }
+
+        &__blc {
+            margin: 0 0 40px;
+
+            &--img {
+                max-width: 427px;
+                width: 427px;
+            }
+
+            &--txt {
+                max-width: 53px;
+                width: 53px;
+
+                &01 {
+                    width: 10px;
+                    height: 81px;
+                }
+            }
+        }
+
+        &__link {
+            padding: 22px 0;
+            border-radius: 50px;
+            width: 376px;
+            margin: 0 auto;
+        }
+
+        &01 {
+            padding: 82px 0 60px;
+
+            &__ttl {
+                width: 277px;
+                height: 109px;
+                margin: 0 0 21px;
+            }
+        }
+
+        &02 {
+            padding: 62px 0 60px;
+
+            &__ttl {
+                width: 234px;
+                height: 109px;
+                margin: 0 0 21px;
+            }
+        }
+
+        &03 {
+            padding: 62px 0 60px;
+
+            &__ttl {
+                width: 201px;
+                height: 109px;
+                margin: 0 0 21px;
+            }
+        }
+
+        &04 {
+            padding: 62px 0 60px;
+
+            &__ttl {
+                width: 256px;
+                height: 109px;
+                margin: 0 0 21px;
+            }
+        }
+
+        .swiper {
+            width: 428px;
+            margin: 0 auto 50px;
+        }
+
+        .swiper-slide {
+            img {
+                width: 100%;
+                padding: 0 36px;
+            }
+        }
+
+        .swiper-button-prev {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .swiper-button-next {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.point {
+    padding: 12.8vw 5vw;
+
+    &__ttl {
+        @include mx.bg('ttl_point.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+
+    &__inner {
+        border-bottom: solid 1px base.$BC;
+        padding-bottom: 2vw;
+    }
+
+    &__blc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 10.53vw;
+
+        &01 {
+            @include mx.bg('txt_point01.png');
+            width: 39.2vw;
+            height: 37vw;
+            margin: 0 2.4vw 0 0;
+        }
+
+        &02 {
+            @include mx.bg('txt_point02.png');
+            width: 39.2vw;
+            height: 37.8vw;
+            margin: 0 0 0 2.4vw;
+        }
+
+        &03 {
+            @include mx.bg('txt_point03.png');
+            width: 39.2vw;
+            height: 31.46vw;
+            margin: 0 2.4vw 0 0;
+        }
+
+        &--img {
+            width: 42.1vw;
+            height: 42.1vw;
+        }
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 60px 24px;
+
+        &__ttl {
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+
+        &__inner {
+            padding-bottom: 10px;
+        }
+
+        &__blc {
+            margin: 0 0 50px;
+
+            &01 {
+                width: 188px;
+                height: 177px;
+                margin: 0 11px 0 0;
+
+            }
+
+            &02 {
+                width: 188px;
+                height: 181px;
+                margin: 0 0 0 11px;
+
+            }
+
+            &03 {
+                width: 188px;
+                height: 151px;
+                margin: 0 11px 0 0;
+
+            }
+
+            &--img {
+                width: 202px;
+                height: 202px;
+            }
+        }
+    }
+}
+
+.feature{
+    padding: 0 5vw;
+    &__ttl{
+        @include mx.bg('ttl_feature.png');
+        margin: 0 auto 8.73vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+    &__inner{
+        border-bottom: solid 1px base.$BC;
+        padding: 0 0 12.6vw 0;
+    }
+    &__blc{
+        background: #f5ebd7;
+        padding: 10.53vw 0 4.13vw;
+    }
+    &__point{
+        margin: 0 5.33vw;
+        li{
+            margin: 0 0 6.6vw;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 60px 24px 0;
+        &__ttl{
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 42px;
+        }
+        &__inner{
+            padding-bottom: 56px;
+        }
+        &__blc{
+            padding: 50px 0 20px; 
+        }
+        &__point{
+            margin: 0 26px;
+            li{
+                margin: 0 0 32px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+.spec{
+    padding: 12.8vw 5vw 0;
+    &__ttl{
+        @include mx.bg('ttl_point.png');
+        margin: 0 auto 4.53vw;
+        width: 33vw;
+
+        height: 10.666vw;
+    }
+    &__inner{
+        border-bottom: solid 1px base.$BC;
+        padding-bottom: 11.73vw;
+    }
+    &__list{
+        margin: 0 0 8.4vw;
+        li{
+            border-bottom: solid 1px #cccccc;
+            padding: 6vw 0;
+            display: flex;
+            p{
+                font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+                color: base.$BC;
+                font-size: 4vw;
+                line-height: 1.4;
+            }
+        }
+        &--ttl{
+            font-weight: bold;
+            width: 37.2vw;
+            max-width: 37.2vw;
+        }
+        &--txt{
+            width: 62.8vw;
+            max-width: 62.8vw;
+        }
+    }
+    &__attention{
+        background: #f4ecd9;
+        padding: 7vw 5vw;
+        &--ttl{
+            font-weight: bold;
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            color: base.$BC;
+            @include mx.fz(18);
+            line-height: 1;
+            margin: 0 0 18px;
+        }
+        &--txt{
+            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            color: base.$BC;
+            text-indent: -1em;
+            padding-left: 1em;
+            @include mx.fz(15);
+            margin: 0 0 5px;
+            line-height: 1.4;
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 60px 24px 0;
+        &__ttl{
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+        &__inner{
+            padding-bottom: 56px;
+        }
+
+        &__list{
+            margin: 0 0 40px;
+            li{
+                padding: 29px 0;
+                p{
+                    @include mx.fz(18);
+
+                }
+            }
+            &--ttl{
+                width: 180px;
+                max-width: 180px;
+            }
+            &--txt{
+                width: 300px;
+                max-width: 300px;
+            }
+        }
+        &__attention{
+            padding: 33px 24px;
+
+        }
+    }
+}
+
+
+.producer{
+    padding: 12.6vw 5vw 0;
+    &__ttl{
+        @include mx.bg('ttl_producer.png');
+        margin: 0 auto 4.26vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+    &__inner{
+        border-bottom: solid 1px base.$BC;
+        padding-bottom: 11.73vw;
+    }
+    &__nick{
+        @include mx.bg('name_producer.png');
+        margin: 0 auto 10.8vw;
+        width: 36.4vw;
+        height: 7.6vw;
+    }
+    &__img{
+        width: 53.33vw;
+        height: 69.8vw;
+        display: block;
+        margin: 0 auto 6.2vw;
+    }
+    &__name{
+        @include mx.fz(16);
+        margin: 0 auto 5.6vw;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: base.$BC;
+
+    }
+    &__explain{
+        color: base.$BC;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        @include mx.fz(14);
+        line-height: 1.86;
+
+        margin: 0 0 9vw;
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 60px 24px 0;
+        &__ttl{
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 20px;
+        }
+        &__inner{
+            padding-bottom: 56px;
+
+        }
+        &__nick{
+            margin: 0 auto 52px;
+            width: 175px;
+            height: 36px;
+        }
+        &__img{
+            width: 256px;
+            height: 335px;
+            margin: 0 auto 28px;
+        }
+        &__name{
+            margin: 0 auto 27px;
+
+        }
+        &__explain{
+            margin: 0 0 36px;
+
+        }
+    }
+}
+.policies{
+    padding: 6vw 5.3vw;
+    a{
+        word-break: break-all;
+
+    }
+    &__ttl{
+        padding: 6.66vw 0!important;
+        font-family: 'Work Sans';
+        @include mx.fz(16);
+        color: base.$RED;
+        cursor: pointer;
+        &--plus{
+            display: block;
+            position: relative;
+        
+            &::before,
+            &::after {
+              content: '';
+              display: block;
+              width: 15px;
+              height: 2px;
+              background: base.$RED;
+              position: absolute;
+              right: 0;
+              top: calc(50% - 8px);
+              transform: translateY(-50%);
+            }
+            &::after{
+                transform: translateY(-50%) rotate(90deg);
+                /* プラスからマイナスへの切り替えをゆっくり行いアニメーションさせる */
+                transition: 0.5s;
+            
+            }
+
+        }
+        &.active{
+            .policies__ttl--plus{
+                &::after{
+                    transform: rotate(0);
+                    transition: 0.5s;
+                }
+            }
+
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 30px 26px;
+        &__ttl{
+            padding: 14px 0!important;
+        }
+    }
+}
+.company{
+    display: none;
+    @media screen and (min-width: base.$PCW) {
+    /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+    }
+}
+
+.privacy{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    color: base.$BC;
+    @include mx.fz(14);
+    display: none;
+    &__blc{
+        background: #f4ecd9;
+        width: 100%;
+        padding: 6.66vw 5vw 0.1vw;
+    }
+    &__ttl{
+        @include mx.fz(16);
+        font-weight: bold;
+        color: base.$BC;
+    }
+    &__subttl{
+        @include mx.fz(14);
+        font-weight: bold;
+        color: base.$BC;
+        line-height: 1.6;
+    }
+    &__txt{
+        @include mx.fz(14);
+        color: base.$BC;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    &__txt02{
+        margin-top: 20px;
+        @include mx.fz(14);
+        color: base.$BC;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    &__con{
+        margin: 5.6vw 0;
+    }
+    &__m10{
+        margin: 10px 0;
+        display: block;
+    }
+    &__smallcon{
+        @include mx.fz(14);
+        padding-left: 1em;
+        margin: 0 0 20px;
+    }
+    &__dotted{
+        text-indent: -1em;
+        padding-left: 1em;
+        line-height: 1.5;
+        @include mx.fz(14);
+
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__blc{
+            padding: 30px 20px 1px;
+        }
+        &__con{
+            margin: 26px 0;
+        }
+        
+    }
+
+
+}
+
+
+
+@media screen and (min-width: base.$BP) {
+    /* タブレット用レイアウト 600px以上の範囲に収めるデザインはこの中に記述 */
+}
+
+
+@media screen and (min-width: base.$PCW) {
+    /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+
+}
+
+.mb10{
+    margin-bottom: 10px;
+}

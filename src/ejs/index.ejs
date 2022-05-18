@@ -1,0 +1,527 @@
+<!-- 変数名の設定 -->
+<% let pageId = 'home'; %>
+<%- include('./_header', { pageId: pageId }) %>
+
+<body class="drawer drawer--right" id="<% if (pageId === 'home'){ %>home<% } else { %>newspage<% } %>">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTXH7Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="main__wrapper">
+
+        <%- include('./_mainpc', { pageId: pageId }) %>
+        <div class="main">
+
+            <main>
+                <%- include('./_headersp', { pageId: pageId }) %>
+
+                <section class="top" id="top">
+                    <div class="top__inner">
+                        <div class="top__blc">
+                            <h2 class="top__ttl">瞳から、あなたをもっと愛して 1day Color Contact Lenses LOUER Produced by Momochi</h2>
+                            <div class="youtube">
+                                <iframe width="560" height="315"
+                                    src="https://www.youtube-nocookie.com/embed/phwcwRx3Z8M?autoplay=1&mute=1&playsinline=1&loop=1&playlist=phwcwRx3Z8M"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <ul class="top__items">
+                                <li>
+                                    <img src="../img/img_item01.png" alt="商品01" width="100%" height="auto">
+                                    <img src="../img/img_itemLenz01.png" alt="商品詳細01" class="top__items--img">
+                                </li>
+                                <li>
+                                    <img src="../img/img_item02.png" alt="商品02" width="100%" height="auto">
+                                    <img src="../img/img_itemLenz02.png" alt="商品詳細02" class="top__items--img">
+                                </li>
+
+                                <li>
+                                    <img src="../img/img_item03.png" alt="商品03" width="100%" height="auto">
+                                    <img src="../img/img_itemLenz03.png" alt="商品詳細03" class="top__items--img">
+                                </li>
+                                <li>
+                                    <img src="../img/img_item04.png" alt="商品04" width="100%" height="auto">
+                                    <img src="../img/img_itemLenz04.png" alt="商品詳細04" class="top__items--img">
+                                </li>
+                            </ul>
+
+                            <ul class="top__features">
+                                <li>DIA 14.2mm</li>
+                                <li>BC 8.7mm</li>
+                                <li>含水率 38%</li>
+                                <li>UV CUT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <%- include('./_shop', { pageId: pageId }) %>
+
+
+                <section class="campaign" id="campaign">
+                    <h2 class="campaign__ttl">campaign</h2>
+                    <div class="campaign__inner">
+                        <a href="" class="campaign__link">
+                            <p class="campaign__link--date">2022.04.01</p>
+                            <p class="campaign__link--text">テキストが入ります。テキストが入ります。画像の場合は左右余白を保ったまま配置</p>
+                        </a>
+
+                        <a href="" class="campaign__link">
+                            <p class="campaign__link--date">2022.04.01</p>
+                            <img src="https://placehold.jp/400x300.png" alt="">
+                            <p class="campaign__link--text">テキストが入ります。テキストが入ります。画像の場合は左右余白を保ったまま配置</p>
+
+                        </a>
+
+                        <a href="" class="campaign__link">
+                            <p class="campaign__link--date">2022.04.01</p>
+                            <img src="https://placehold.jp/400x100.png" alt="">
+                        </a>
+
+                    </div>
+                </section>
+
+                <section class="concept" id="concept">
+                    <h2 class="concept__ttl">concept</h2>
+                    <h3 class="concept__subttl fuwanime"><span>Love Your Better</span></h3>
+                    <h4 class="concept__subjp fuwanime"><span>瞳から、あなたをもっと愛して</span></h4>
+                    <figure class="concept__mainimg fuwanime">
+                        <img src="../img/mainimg_concept.png" alt="concpt Main image">
+                    </figure>
+                    <figure class="concept__star fuwanime">STAR</figure>
+
+                    <p class="concept__txt01 fuwanime">LOUERの由来は “Love You Better”</p>
+                    <p class="concept__txt02 fuwanime">顔も背丈も体格も、瞳も、世界に一人しかいない、それが私だから。</p>
+                    <p class="concept__txt03 fuwanime">ナチュラルだけどあか抜ける愛されレンズを着けて、自分をもっと好きになろう。</p>
+                    <p class="concept__txt04 fuwanime">LOUERが届ける、自信と強さをあなたに。</p>
+
+                    <div class="concept__images">
+                        <img src="../img/img01_concept.png" alt="イメージ画像" class="concept__images--img01 fuwanime">
+                        <img src="../img/img02_concept.png" alt="イメージ画像" class="concept__images--img02 fuwanime">
+                    </div>
+                </section>
+
+                <section class="topitems" id="topitems">
+                    <div class="topitems01">
+                        <h2 class="topitems__ttl">LINE UP</h2>
+                        <div class="topitems__inner">
+                            <p class="topitems__num">01</p>
+                            <h3 class="topitems01__ttl">MISS YOU BROWN</h3>
+                            <figure class="topitems__img">
+                                <img src="../img/img_itemLenz01.png" alt="01 MISS YOU BROWN">
+                            </figure>
+                            <p class="topitems__name">ミスユーブラウン</p>
+                            <p class="topitems__feature">裸眼より綺麗に見える<br>絶妙なナチュラルブラウン</p>
+
+
+                        </div>
+                        <div class="topitems__blc fuwanime">
+                            <div class="topitems__blc--txt">
+                                <p class="topitems__blc--txt01">DIA 14.2mm</p>
+                            </div>
+                            <figure class="topitems__blc--img">
+                                <img src="../img/img_items01.png" alt="01 MISS YOU BROWN" width="100%">
+                            </figure>
+                        </div>
+
+                        <div class="topitems__clenz">
+                            <h3 class="topitems__clenz--ttl">装用イメージ</h3>
+                        </div>
+
+                        <div class="swiper mySwiper01">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide"><img src="../img/img_clenz01a.png" alt=""></div>
+                                <div class="swiper-slide"><img src="../img/img_clenz01b.png" alt=""></div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+
+                        <a href="/lineup.html#lineup01__cordinate" class="topitems__link">
+                            <span class="topitems__link--txt">このレンズに合うコーデを見る</span>
+                            <span class="topitems__link--arrow">&#8594;</span>
+                        </a>
+                    </div>
+
+                    <div class="topitems02">
+                        <div class="topitems__inner">
+                            <p class="topitems__num">02</p>
+                            <h3 class="topitems02__ttl">02 HUG ME BEIGE</h3>
+                            <figure class="topitems__img">
+                                <img src="../img/img_itemLenz02.png" alt="02 HUG ME BEIGE">
+                            </figure>
+                            <p class="topitems__name">ハグミーベージュ</p>
+                            <p class="topitems__feature">ほんのりベージュ味のある<br>ブラウンで優しい瞳に</p>
+
+
+                        </div>
+                        <div class="topitems__blc fuwanime">
+
+                            <figure class="topitems__blc--img">
+                                <img src="../img/img_items02.png" alt="02 HUG ME BEIGE" width="100%">
+                            </figure>
+                            <div class="topitems__blc--txt">
+                                <p class="topitems__blc--txt01">DIA 14.2mm</p>
+                            </div>
+                        </div>
+
+                        <div class="topitems__clenz">
+                            <h3 class="topitems__clenz--ttl">装用イメージ</h3>
+                        </div>
+
+                        <div class="swiper mySwiper02">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide"><img src="../img/img_clenz02a.png" alt=""></div>
+                                <div class="swiper-slide"><img src="../img/img_clenz02b.png" alt=""></div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+
+                        <a href="/lineup.html#lineup02__cordinate" class="topitems__link">
+                            <span class="topitems__link--txt">このレンズに合うコーデを見る</span>
+                            <span class="topitems__link--arrow">&#8594;</span>
+                        </a>
+                    </div>
+
+
+
+                    <div class="topitems03">
+                        <div class="topitems__inner">
+                            <p class="topitems__num">03</p>
+                            <h3 class="topitems03__ttl">03 LOVE CAMEL</h3>
+                            <figure class="topitems__img">
+                                <img src="../img/img_itemLenz03.png" alt="03 LOVE CAMEL">
+                            </figure>
+                            <p class="topitems__name">ラブキャメル</p>
+                            <p class="topitems__feature">馴染みの良いキャメルで<br>
+                                ほんのり瞳をトーンアップ</p>
+
+
+                        </div>
+                        <div class="topitems__blc fuwanime">
+                            <div class="topitems__blc--txt">
+                                <p class="topitems__blc--txt01">DIA 14.2mm</p>
+                            </div>
+                            <figure class="topitems__blc--img">
+                                <img src="../img/img_items03.png" alt="03 LOVE CAMEL" width="100%">
+                            </figure>
+
+                        </div>
+
+                        <div class="topitems__clenz">
+                            <h3 class="topitems__clenz--ttl">装用イメージ</h3>
+                        </div>
+
+                        <div class="swiper mySwiper03">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide"><img src="../img/img_clenz03a.png" alt=""></div>
+                                <div class="swiper-slide"><img src="../img/img_clenz03b.png" alt=""></div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+
+                        <a href="/lineup.html#lineup03__cordinate" class="topitems__link">
+                            <span class="topitems__link--txt">このレンズに合うコーデを見る</span>
+                            <span class="topitems__link--arrow">&#8594;</span>
+                        </a>
+                    </div>
+
+                    <div class="topitems04">
+                        <div class="topitems__inner">
+                            <p class="topitems__num">04</p>
+                            <h3 class="topitems04__ttl">04 CHELISH PINK</h3>
+                            <figure class="topitems__img">
+                                <img src="../img/img_itemLenz04.png" alt="04 CHELISH PINK">
+                            </figure>
+                            <p class="topitems__name">チェリッシュピンク</p>
+                            <p class="topitems__feature">使いやすさにこだわった<br>
+                                甘すぎないピンクカラー</p>
+
+                        </div>
+                        <div class="topitems__blc fuwanime">
+
+                            <figure class="topitems__blc--img">
+                                <img src="../img/img_items04.png" alt="04 CHELISH PINK" width="100%">
+                            </figure>
+                            <div class="topitems__blc--txt">
+                                <p class="topitems__blc--txt01">DIA 14.2mm</p>
+                            </div>
+                        </div>
+
+                        <div class="topitems__clenz">
+                            <h3 class="topitems__clenz--ttl">装用イメージ</h3>
+                        </div>
+
+                        <div class="swiper mySwiper03">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide"><img src="../img/img_clenz04a.png" alt=""></div>
+                                <div class="swiper-slide"><img src="../img/img_clenz04b.png" alt=""></div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+
+                        <a href="/lineup.html#lineup04__cordinate" class="topitems__link">
+                            <span class="topitems__link--txt">このレンズに合うコーデを見る</span>
+                            <span class="topitems__link--arrow">&#8594;</span>
+                        </a>
+                    </div>
+
+
+                </section>
+
+                <%- include('./_explain', { pageId: pageId }) %>
+
+
+                <section class="producer" id="producer">
+                    <div class="producer__inner">
+                        <h2 class="producer__ttl">Producer</h2>
+                        <h3 class="producer__nick fuwanime">MOMOCHI</h3>
+                        <img src="../img/img_producer.png" alt="MOMOCHI" class="producer__img fuwanime">
+                        <h4 class="producer__name">ももち (牛江 桃子)</h4>
+                        <p class="producer__explain">
+                            地下アイドル・人気アパレル店員を経て、ライブコマーサー・起業家に転身。YouTubeの登録者数は40万人を超え、Instagramのフォロワー数は約18万人に。毎週22時から生配信を行うファッションライバーでもある。『S
+                            Cawaii !』のレギュラーモデルとしても活躍中。<br>
+                            SNSやライブ配信で紹介した洋服やコスメは即完売、初のスタイルブック『ももちのクセが強すぎた。本』も2度重版するなど、各地で「#ももち買い」が起きている。ライブコマースに強みを持つアパレルブランド「Lil
+                            Ambition」や青汁、コスメMOOK本をプロデュースしている他、カラコンのプロデュースも決定。
+                            フォロワー層の9割が女性で、Z世代の女子から圧倒的な支持を持つインフルエンサー。</p>
+                        <div class="youtube">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube-nocookie.com/embed/phwcwRx3Z8M?autoplay=1&mute=1&playsinline=1&loop=1&playlist=phwcwRx3Z8M"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="policies" id="policies">
+                    <p class="policies__ttl"><span>COMPANY</span><span class="policies__ttl--plus"></span></p>
+                    <div class="company policies__nav" id="company">
+                        <ul class="spec__list">
+                            <li>
+                                <p class="spec__list--ttl">会社名</p>
+                                <p class="spec__list--txt">PIA株式会社</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">所在地</p>
+                                <p class="spec__list--txt">東京都品川区西五反田7-22-17<br>TOCビル11F</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">代表電話</p>
+                                <p class="spec__list--txt">03-6417-0220</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">代表取締役</p>
+                                <p class="spec__list--txt">中西 聖</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">資本金</p>
+                                <p class="spec__list--txt">5,000万円</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">第1種医療機器<br>
+                                    製造販売業</p>
+                                <p class="spec__list--txt">第13B1X10130号</p>
+                            </li>
+                            <li>
+                                <p class="spec__list--ttl">医療機器製造業</p>
+                                <p class="spec__list--txt">第13BZ200575号</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="policies__ttl"><span>PRIVACY POLICY</span><span class="policies__ttl--plus"></span></p>
+                    <div class="privacy policies__nav" id="privacy">
+                        <div class="privacy__blc">
+                            <h3 class="privacy__ttl">個人情報保護方針</h3>
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">1.利用目的</h4>
+                                <p class="privacy__txt">
+                                    当社で取り扱う個人情報は以下を含む、お客様へより良い商品・サービスの提供、有用な情報のお届け、その他正当な目的のためのみ利用いたします。</p>
+                                <p class="privacy__txt">(1)お客様の氏名、住所、電話番号、電子メールアドレスを以下の目的で利用します</p>
+                                <div class="privacy__smallcon">
+                                    <p class="privacy__dotted">・ご購入商品・懸賞賞品・キャンペーン商品・試供品の発送のため</p>
+                                    <p class="privacy__dotted">
+                                        ・メール,DMその他の手段による各種情報の提供のため・お客様からの商品及び当社サービスに関するお問い合わせ等への適切な対応及びご案内のため</p>
+                                    <p class="privacy__dotted">
+                                        ・当社の商品開発、事業開発、当社の商品・サービスの品質改善等を目的とした調査・分析のためのマーケティング、当社サービス向上のため</p>
+                                    <p class="privacy__dotted">・採用の応募者の個人情報について採用に関する各種連絡のため</p>
+                                    <p class="privacy__dotted">・従業者の個人情報について人事・労務管理などのため</p>
+                                </div>
+
+                                <p class="privacy__txt">(2)取得した閲覧履歴や購買履歴等の情報を分析して、以下の目的で利用します</p>
+                                <div class="privacy__smallcon">
+                                    <p class="privacy__dotted">・趣味・嗜好に応じた商品・サービスに関する広告の表示のため</p>
+                                    <p class="privacy__dotted">・メール・趣味・嗜好に応じた当社及び当社グループのサービスのご案内のため</p>
+                                </div>
+                            </div>
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">2.個人情報の収集</h4>
+                                <p class="privacy__txt">当社ではお客様の個人情報を以下のタイミングで収集します。</p>
+                                <p class="privacy__dotted">・商品やサービスのご購入、お問い合わせやご相談、その他当社グループが提供するサービスをご利用いただいた場合</p>
+                                <p class="privacy__dotted">・モニター、アンケート、インタビューなどにお応えいただいた場合</p>
+                                <p class="privacy__dotted">・当社グループ主催の各種企画・イベント・キャンペーンに応募や参加をされた場合</p>
+
+                                <div class="privacy__m10">
+                                    <p class="privacy__txt">■当社が取得する個人情報の項目</p>
+                                </div>
+                                <div class="privacy__smallcon">
+                                    <p class="privacy__dotted">・氏名、生年月日、電話番号、電子メールアドレス、住所</p>
+                                    <p class="privacy__dotted">・お客様のコンピュータがインターネットに接続するときに使用される情報、モバイル端末でのアクセスによる契約端末情報
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">3.Cookie（クッキー）</h4>
+                                <p class="privacy__txt">
+                                    Cookie（クッキー）は、利用者のサイト閲覧履歴を、利用者のコンピュータに保存しておく仕組みです。ただし、ブラウザ単位での識別であり、利用者の個人情報（氏名、生年月日、電話番号、メールアドレス、住所等の情報）を特定するような情報は含まれません。<br>
+                                    利用者はCookie（クッキー）を無効にすることで収集を拒否することができますのでお使いのブラウザの設定をご確認ください。</p>
+                            </div>
+
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">4.アクセス解析</h4>
+                                <p class="privacy__txt">当社では、「Google Analytics」のツールを用いて、お客様の当社ウェブサイトの利用状況等を分析することがあります。</p>
+                                <div class="privacy__m10">
+                                    <p class="">■ツール提供者</p>
+                                    <p class="privacy__txt">Google Inc.</p>
+                                </div>
+                                <p class="privacy__txt">■取得する情報<br>
+                                    お客様の当社ウェブサイトの利用状況（アクセス状況、トラフィック、ルーティング等）</p>
+                                <p class="privacy__txt">■利用目的<br>利便性の向上やサイトの改善のため</p>
+                            
+                                <p class="privacy__txt">■お客様の当社ウェブサイトの利用状況については、Google社も取得し、利用します。<br>詳細については、以下のURLをご確認ください。</p>
+
+                                <p class="privacy__dotted mb10">・Google Analytics利用規約<br>
+                                    <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank">https://marketingplatform.google.com/about/analytics/terms/jp/</a>
+                                </p>
+                                <p class="privacy__dotted mb10">・Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用<br>
+                                    <a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank">https://policies.google.com/technologies/partner-sites?hl=ja</a>
+                                </p>
+                                <p class="privacy__txt02">Google Analyticsに関する情報は、以下のサイトからも入手できます。</p>
+                                <p class="privacy__dotted mb10">・Googleプライバシーポリシー<br>
+                                    <a href="https://policies.google.com/privacy?hl=ja" target="_blank">https://policies.google.com/privacy?hl=ja</a>
+                                </p>
+                                <p class="privacy__dotted mb10">・Google Analyticsに関する詳細情報<br>
+                                    <a href="https://support.google.com/analytics/answer/6004245" target="_blank">https://support.google.com/analytics/answer/6004245</a>
+                                </p>
+                                <p class="privacy__txt mb10">このサービスは、トラフィックサービスの収集のためにCookie（クッキー）を使用しています。トラフィックデータは匿名で収集されており、個人を特定するものではありません。Googleアナリティクスによるクッキーの利用を拒否したい場合は、Googleアナリティクスの提供するサイトよりオプトアウトが可能です。<br>
+                                    <a href="https://tools.google.com/dlpage/gaoptout/" target="_blank">https://tools.google.com/dlpage/gaoptout/</a>
+                                </p>
+                            </div>
+
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">5.個人情報の管理・共同利用</h4>
+                                <p class="privacy__txt">適正な手段でお客様より収集した個人情報は、当社グループ（PIA株式会社および株式会社ARIOSE）として一元管理をし、共同利用させていただきます。個人情報の漏洩、紛失、破壊、改ざん、不正アクセス等の行為に対しては、予防措置を重視し、継続して適切な安全対策を施し業務の改善に努めてまいります。</p>
+                                <p class="privacy__txt">■共同利用する項目<br>氏名、住所、電話番号、メールアドレス、生年月日、性別、Cookie等により収集されたウェブサイト閲覧履歴、株式会社ARIOSE が運営するECサイトでの購入履歴、お問い合わせの内容など</p>
+
+                                <p class="privacy__txt">■共同利用者の範囲<br>
+                                    PIA株式会社、株式会社ARIOSE、その他の当社グループを構成する国内各社</p>
+                                <p class="privacy__txt">■利用目的<br>
+                                    １. に記載のとおり</p>
+                                <p class="privacy__txt">■共同利用の管理責任者<br>
+                                    株式会社ARIOSE<br>
+                                    個人情報管理責任者：中村　悟<br>
+                                    〒141-0031<br>
+                                    東京都品川区西五反田7-22-17</p>
+                            </div>
+                        
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">6.個人情報の適正管理</h4>
+                                <p class="privacy__txt">お客様の個人情報は、最新の状態を確保し、個人情報への不正アクセス、紛失、破壊、改ざんおよび漏えい等の予防並びに是正措置を講じます。</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">7.第三者提供の制限</h4>
+                                <p class="privacy__txt">お客様の個人情報は､特段の事情がない限り､お客様のご承諾なく､業務委託先および提携先以外の第三者に開示･提供いたしません｡</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">8.委託契約の遵守</h4>
+                                <p class="privacy__txt">委託契約において、委託元よりお預かりした個人情報は、適切な管理を行い、その契約内で利用いたします。</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">9.委託先の管理</h4>
+                                <p class="privacy__txt">個人情報の処理を外部へ委託する場合は、漏えいや再提供を行わないように、委託先と契約による義務付けを行い、適切に管理いたします。</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">10.個人情報の確認及び訂正等</h4>
+                                <p class="privacy__txt">お客様が個人情報の確認や訂正・利用停止等を希望される場合には、当社のお客様窓口にて対応し、合理的な範囲で速やかに対応いたします。</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">11.管理体制</h4>
+                                <p class="privacy__txt">全社的な個人情報保護に対する取り組みを強化する為、個人情報責任者を置き、社員に対する教育と啓発を継続的に実践いたします。</p>
+                            </div>
+
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">12.法令遵守</h4>
+                                <p class="privacy__txt">個人情報を取り扱うにあたり、個人情報保護に関する関係法令および社内で定めた規程を遵守するとともに、本ポリシーの内容は継続的に見直し、改善に努めます。</p>
+                            </div>
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">13.改定</h4>
+                                <p class="privacy__txt">当社は、当社の裁量に基づいて、本ポリシーを変更します。但し、個人情報保護法その他の法令により、改定に必要な手続が定められている場合には、当該法令に基づき改定を行うものとします。<br>
+                                    なお、当社は、お客様に対して本ポリシーを変更する場合には、変更後の本ポリシーの施行時期および内容を以下の方法で周知します。</p>
+                                <p class="privacy__txt">・当社のウェブサイトへの掲示<br>
+                                ・お客様への通知<br>
+                                ・その他適切な方法</p>
+                            </div>
+                            <div class="privacy__con">
+                                <h4 class="privacy__subttl">14.お問い合わせ</h4>
+                                <p class="privacy__txt">お客様の個人情報に関するお問い合わせについては<br>
+                                    PIA株式会社　お客様相談窓口<br>
+                                    03-6417-0220<br>
+                                    受付時間 : 9:00~17:00 (土日祝祭日、及び弊社指定休日を除く)<br>
+                                    PIA株式会社<br>
+                                    代表取締役　中西聖</p>
+                                <p class="privacy__txt">改定日<br>改定：2022年3月31日</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%- include('./_footer', { pageId: pageId }) %>
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.drawer').drawer();
+            $('.drawer-nav').on('click', function() {
+                 $('.drawer').drawer('close');
+             });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

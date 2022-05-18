@@ -1,0 +1,1062 @@
+@charset "utf-8";
+@use "../reset";
+@use "../base";
+@use '../mixin'as mx;
+
+.lineuptop{
+    padding:12.8vw 5vw 0;
+    background: url('../img/bg_lineuptop.png') no-repeat top -3px 0;
+    background-size: 100% auto;
+    &__inner{
+        border-bottom: solid 1px base.$BC;
+        padding-bottom: 17.2vw;
+
+    }
+    &__imgblc{
+        position: relative;
+        height: 108.8vw;
+    }
+    &__img01{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 52.8vw;
+        img{
+            width: 100%;
+        }
+    }
+    &__img02{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 52.8vw;
+        img{
+            width: 100%;
+        }
+    }
+    &__img03{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        width: 68.26vw;
+        img{
+            width: 100%;
+        }
+    }
+    &__img04{
+        position: absolute;
+        right: 0;
+        top: 2.2vw;
+        width: 31.9vw;
+        img{
+            width: 100%;
+            animation: rotate-anime 8s linear infinite;
+            opacity: 0.5;
+        }
+    }
+    &__ttl{
+        @include mx.bg('ttl_lineuptop.png');
+        margin: 13vw auto 6.33vw;
+        width: 37.77vw;
+        height: 7.6vw;
+    }
+    &__star{
+        @include mx.bg('star_lineuptop.svg');
+        width: 7.4vw;
+        height: 7.4vw;
+        margin: 0 auto 6.53vw;
+    }
+    &__txt{
+        @include mx.bg('txt_lineuptop.png');
+        margin: 0 auto;
+        width: 63.1vw;
+        height: 31.3vw;
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 61px 24px 0;
+
+        &__inner{
+            padding-bottom: 82px;
+        }
+        &__imgblc{
+            height: 522px;
+        }
+        &__img01{
+            width: 253px;
+        }
+        &__img02{
+            width: 253px;
+        }
+        &__img03{
+            width: 327px;
+        }
+        &__img04{
+            width: 154px;
+            top: 9px;
+        }
+        &__ttl{
+            margin: 62px auto 30px;
+            width: 181px;
+            height: 36px;
+        }
+        &__star{
+            width: 35px;
+            height: 35px;
+            margin: 0 auto 31px;
+        }
+        &__txt{
+            width: 303px;
+            height: 150px;
+        }
+    }
+}
+
+.lineup{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    color: base.$BC;
+    padding: 16.7vw 5vw 0;
+    &__ttl{
+        @include mx.bg('ttl_point.png');
+        margin: 0 auto 10.53vw;
+        width: 33vw;
+        height: 10.666vw;
+    }
+    &__inner{
+        padding-bottom: 13vw;
+        border-bottom: solid 1px base.$BC;
+    }
+    &__blc{
+        position: relative;
+        height: 108vw;
+        width: 78.66vw;
+        margin: 0 auto 4.2vw;
+    }
+    &__img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__lenz{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 78.66vw;
+        max-width: 78.66vw;
+        margin: 0 auto 8.4vw;   
+        &--txts{
+            
+        }
+        &--feature{
+            font-size: 4vw;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        &--dia{
+            border: solid 1px base.$BC;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 2.6vw;
+            padding: 5px 8px;
+            span{
+                font-family: 'Work Sans';
+                font-size: 1.2em;
+                font-weight: 300;
+            }
+        }
+        &--img{
+            width: 102px;
+            max-width: 21.33vw;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__star{
+        display: block;
+        margin: 0 auto 2.66vw;
+        width: 6.46vw;
+        height: 6.46vw;
+    }
+    &__subttl{
+        text-align: center;
+        color: base.$RED;
+        font-size: 4.26vw;
+        margin: 0 auto 4.13vw;
+    }
+    &__cordinate{
+        position: relative;
+        width: 89.3vw;
+        height: 153.5vw;
+        margin: 0 auto;
+        padding: 10.8vw 0 0;
+        &--star{
+            display: block;
+            width: 6.4vw;
+            height: 6.4vw;
+            margin: 0 auto 2.66vw;
+        }
+        &--ttl{
+            @include mx.bg('subttl_line.png');
+            width: 38.86vw;
+            height: 15.93vw;
+            margin: 0 auto;
+        }
+
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        padding: 81px 24px 0;
+        &__inner{
+            padding-bottom: 63px;
+        }
+        &__ttl{
+            width: 158px;
+            height: 51px;
+            margin: 0 auto 50px;
+        }
+        &__blc{
+            height: 518px;
+            width: 378px;
+            margin: 0 auto 16px;
+        }
+        &__lenz{
+            width: 378px;
+            max-width: 378px;
+            margin: 0 auto 40px;   
+            &--feature{
+                font-size: 19px;
+            }
+            &--dia{
+                font-size: 12px;
+            }
+            &--img{
+                width: 102px;
+                max-width: 102px;
+            }
+        }
+        &__star{
+            margin: 0 auto 13px;
+            width: 31px;
+            height: 31px;
+        }
+        &__subttl{
+            font-size: 21px;
+            margin: 0 auto 20px;
+        }
+        &__cordinate{
+            width: 428px;
+            height: 737px;
+            margin: 0 auto;
+            padding: 51px 0 0;
+            &--star{
+                width: 30px;
+                height: 30px;
+                margin: 0 auto 13px;
+            }
+            &--ttl{
+                @include mx.bg('subttl_line.png');
+                width: 186px;
+                height: 77px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+}
+
+.lineup01{
+    position: relative;
+    &__bg01{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln01;
+        display: block;
+        transform: rotate(-30deg);
+        position: absolute;
+        z-index: 0;
+        left: -14vw;
+        top: 82.56vw;
+    }
+    &__bg02{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln01;
+        display: block;
+        transform: rotate(-30deg);
+        position: absolute;
+        z-index: 0;
+        left: -13vw;
+        top: 88vw;
+    }
+    &__star{
+        @include mx.bg('star_lineup01.svg');
+        width: 7.4vw;
+        height: 7.4vw;
+        position: absolute;
+        right: 5.4vw;
+        top: 54.4vw;
+    }
+    &__num{
+        @include mx.bg('num01_line.png');
+        margin: 0 auto 6.4vw;
+        width: 20.2vw;
+        height: 7.46vw;
+    }
+    &__subname{
+        text-align: center;
+        color: base.$ln01;
+        font-size: 3.46vw;
+        margin: 0 auto 4.13vw;
+    }
+    &__name{
+        @include mx.bg('name01_line.png');
+        display: inline-block;
+        width: 64.1vw;
+        height: 25.4vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+    }
+    &__cordinate{
+        background: url('../img/bg_lineup01.png') 0 0 no-repeat;
+        background-size: 100% auto;
+        &--figure01{
+            width: 24.8vw;
+            position: absolute;
+            left: 7.33vw;
+            top: 52vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature01{
+            @include mx.bg('feature01_cordinate01.png');
+            width: 14.8vw;
+            height: 7.33vw;
+            position: absolute;
+            left: 10.3vw;
+            top: 47.53vw;
+        }
+        &--figure02{
+            width: 26.2vw;
+            position: absolute;
+            left: 32.26vw;
+            top: 50.53vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature02{
+            @include mx.bg('feature02_cordinate01.png');
+            width: 18.66vw;
+            height: 7vw;
+            position: absolute;
+            left: 36vw;
+            top: 44.13vw;
+        }
+        &--figure03{
+            width: 23.33vw;
+            position: absolute;
+            right: 8.33vw;
+            top: 49.2vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature03{
+            @include mx.bg('feature03_cordinate01.png');
+            width: 16vw;
+            height: 6vw;
+            position: absolute;
+            right: 8.93vw;
+            top: 44.8vw;
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__bg01{
+            width: 646px;
+            height: 132px;
+            left: -67px;
+            top: 382px;
+        }
+        &__bg02{
+            width: 646px;
+            height: 132px;
+            left: -62px;
+            top: 408px;
+        }
+        &__star{
+            width: 35px;
+            height: 35px;
+            right: 41px;
+            top: 253px;
+        }
+        &__num{
+            margin: 0 auto 31px;
+            width: 97px;
+            height: 36px;
+        }
+        &__subname{
+            @include mx.fz(13);
+            margin: 0 auto 20px;
+        }
+        &__name{
+            width: 308px;
+            height: 122px;
+        }
+        &__cordinate{
+            &--figure01{
+                width:  119px;
+                left: 35px;
+                top: 250px;
+            }
+            &--feature01{
+                width: 71px;
+                height: 35px;
+                left: 54px;
+                top: 228px;
+            }
+            &--figure02{
+                width: 126px;
+                left: 155px;
+                top: 242px;
+            }
+            &--feature02{
+                width: 90px;
+                height: 34px;
+                left: 173px;
+                top: 212px;
+            }
+            &--figure03{
+                width: 112px;
+                right: 40px;
+                top: 238px;
+
+            }
+            &--feature03{
+                width: 77px;
+                height: 29px;
+                right: 43px;
+                top: 215px;
+            }
+        }
+    }
+}
+
+.lineup02{
+    position: relative;
+    &__bg01{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln02;
+        display: block;
+        transform: rotate(15deg);
+        position: absolute;
+        z-index: 0;
+        left: -13vw;
+        top: 82vw;
+    }
+    &__bg02{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln02;
+        display: block;
+        transform: rotate(15deg);
+        position: absolute;
+        z-index: 0;
+        left: -14vw;
+        top: 87vw;
+    }
+    &__star{
+        @include mx.bg('star_lineup02.svg');
+        width: 7.4vw;
+        height: 7.4vw;
+        position: absolute;
+        left: 5.4vw;
+        top: 58.3vw;
+    }
+    &__num{
+        @include mx.bg('num02_line.png');
+        margin: 0 auto 6.4vw;
+        width: 20.2vw;
+        height: 7.46vw;
+    }
+    &__subname{
+        text-align: center;
+        color: base.$ln02;
+        font-size: 3.46vw;
+        margin: 0 auto 4.13vw;
+    }
+    &__name{
+        @include mx.bg('name02_line.png');
+        display: inline-block;
+        width: 64.1vw;
+        height: 25.4vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+    }
+    &__cordinate{
+        background: url('../img/bg_lineup02.png') 0 0 no-repeat;
+        background-size: 100% auto;
+        &--figure01{
+            width: 21vw;
+            position: absolute;
+            left: 12.26vw;
+            top: 51.4vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature01{
+            @include mx.bg('feature01_cordinate01.png');
+            width: 14.8vw;
+            height: 7.33vw;
+            position: absolute;
+            left: 10.73vw;
+            top: 45.46vw;
+        }
+        &--figure02{
+            width: 26.13vw;
+            position: absolute;
+            left: 31.53vw;
+            top: 49.86vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature02{
+            @include mx.bg('feature02_cordinate01.png');
+            width: 18.66vw;
+            height: 7vw;
+            position: absolute;
+            left: 33.13vw;
+            top: 43.73vw;
+        }
+        &--figure03{
+            width: 27.93vw;
+            position: absolute;
+            right: 6.53vw;
+            top: 50.4vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature03{
+            @include mx.bg('feature03_cordinate01.png');
+            width: 16vw;
+            height: 6vw;
+            position: absolute;
+            right: 13.2vw;
+            top: 44.53vw;
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__bg01{
+            width: 646px;
+            height: 132px;
+            left: -67px;
+            top: 402px;
+        }
+        &__bg02{
+            width: 646px;
+            height: 132px;
+            left: -62px;
+            top: 428px;
+        }
+        &__star{
+            width: 35px;
+            height: 35px;
+            left: 24px;
+            top: 254px;
+        }
+        &__num{
+            margin: 0 auto 31px;
+            width: 97px;
+            height: 36px;
+        }
+        &__subname{
+            @include mx.fz(13);
+            margin: 0 auto 20px;
+        }
+        &__name{
+            width: 308px;
+            height: 122px;
+        }
+        &__cordinate{
+            &--figure01{
+                width:  101px;
+                left: 59px;
+                top: 247px;
+
+            }
+            &--feature01{
+                width: 71px;
+                height: 35px;
+                left: 52px;
+                top: 218px;
+            }
+            &--figure02{
+                width: 125px;
+                left: 151px;
+                top: 239px;
+            }
+            &--feature02{
+                width: 90px;
+                height: 34px;
+                left: 159px;
+                top: 209px;
+            }
+            &--figure03{
+                width: 134px;
+                right: 31px;
+                top: 242px;
+            }
+            &--feature03{
+                width: 77px;
+                height: 29px;
+                right: 63px;
+                top: 213px;
+            }
+        }
+    }
+}
+
+////----------------------------------------------03
+.lineup03{
+    position: relative;
+    &__bg01{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln03;
+        display: block;
+        transform: rotate(-14deg);
+        position: absolute;
+        z-index: 0;
+        left: -14vw;
+        top: 82vw;
+    }
+    &__bg02{
+        width: 134.7vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln03;
+        display: block;
+        transform: rotate(-14deg);
+        position: absolute;
+        z-index: 0;
+        left: -13vw;
+        top: 87vw;
+    }
+    &__star{
+        @include mx.bg('star_lineup03.svg');
+        width: 7.4vw;
+        height: 7.4vw;
+        position: absolute;
+        right: 5.2vw;
+        top: 54.5vw;
+    }
+    &__num{
+        @include mx.bg('num03_line.png');
+        margin: 0 auto 6.4vw;
+        width: 20.2vw;
+        height: 7.46vw;
+    }
+    &__subname{
+        text-align: center;
+        color: base.$ln03;
+        font-size: 3.46vw;
+        margin: 0 auto 4.13vw;
+    }
+    &__name{
+        @include mx.bg('name03_line.png');
+        display: inline-block;
+        width: 64.1vw;
+        height: 25.4vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+    }
+    &__cordinate{
+        background: url('../img/bg_lineup03.png') 0 0 no-repeat;
+        background-size: 100% auto;
+        &--figure01{
+            width: 29.46vw;
+            position: absolute;
+            left: 6.66vw;
+            top: 50vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature01{
+            @include mx.bg('feature01_cordinate03.png');
+            width: 12.86vw;
+            height: 9.4vw;
+            position: absolute;
+            left: 13.13vw;
+            top: 44.73vw;
+        }
+        &--figure02{
+            width: 29.86vw;
+            position: absolute;
+            left: 27.93vw;
+            top: 49vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature02{
+            @include mx.bg('feature02_cordinate03.png');
+            width: 18.86vw;
+            height: 9vw;
+            position: absolute;
+            left: 36.46vw;
+            top: 43.53vw;
+        }
+        &--figure03{
+            width: 34vw;
+            position: absolute;
+            right: 2.53vw;
+            top: 49.2vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature03{
+            @include mx.bg('feature03_cordinate03.png');
+            width: 15vw;
+            height: 7.6vw;
+            position: absolute;
+            right: 11.93vw;
+            top: 43.26vw;
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__bg01{
+            width: 646px;
+            height: 132px;
+            left: -67px;
+            top: 388px;
+        }
+        &__bg02{
+            width: 646px;
+            height: 132px;
+            left: -62px;
+            top: 410px;
+        }
+        &__star{
+            width: 35px;
+            height: 35px;
+            right: 25px;
+            top: 259px;
+        }
+        &__num{
+            margin: 0 auto 31px;
+            width: 97px;
+            height: 36px;
+        }
+        &__subname{
+            @include mx.fz(13);
+            margin: 0 auto 20px;
+        }
+        &__name{
+            width: 308px;
+            height: 122px;
+        }
+        &__cordinate{
+            &--figure01{
+                width: 141px;
+                left: 32px;
+                top: 240px;
+            }
+            &--feature01{
+                width: 62px;
+                height: 45px;
+                left: 63px;
+                top: 215px;
+            }
+            &--figure02{
+                width: 143px;
+                left: 134px;
+                top: 235px;
+            }
+            &--feature02{
+                width: 90px;
+                height: 43px;
+                left: 175px;
+                top: 209px;
+            }
+            &--figure03{
+                width: 164px;
+                right: 12px;
+                top: 235px;
+
+            }
+            &--feature03{
+                width: 72px;
+                height: 36px;
+                right: 57px;
+                top: 208px;
+
+            }
+        }
+    }
+}
+
+////----------------------------------------------04
+.lineup04{
+    position: relative;
+    &__bg01{
+        width: 126vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln04;
+        display: block;
+        transform: rotate(15deg);
+        position: absolute;
+        z-index: 0;
+        left: -10vw;
+        top: 83vw;
+    }
+    &__bg02{
+        width: 126vw;
+        height: 27.66vw;
+        border-radius: 50%;
+        border: solid 1px base.$ln04;
+        display: block;
+        transform: rotate(15deg);
+        position: absolute;
+        z-index: 0;
+        left: -9vw;
+        top: 88vw;
+    }
+    &__star{
+        @include mx.bg('star_lineup04.svg');
+        width: 7.4vw;
+        height: 7.4vw;
+        position: absolute;
+        left: 5.4vw;
+        top: 54vw;
+    }
+    &__num{
+        @include mx.bg('num04_line.png');
+        margin: 0 auto 6.4vw;
+        width: 20.2vw;
+        height: 7.46vw;
+    }
+    &__subname{
+        text-align: center;
+        color: base.$ln04;
+        font-size: 3.46vw;
+        margin: 0 auto 4.13vw;
+    }
+    &__name{
+        @include mx.bg('name04_line.png');
+        display: inline-block;
+        width: 64.1vw;
+        height: 25.4vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+    }
+    &__cordinate{
+        background: url('../img/bg_lineup04.png') 0 0 no-repeat;
+        background-size: 100% auto;
+        &--figure01{
+            width: 21.53vw;
+            position: absolute;
+            left: 12.86vw;
+            top: 50.2vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature01{
+            @include mx.bg('feature01_cordinate03.png');
+            width: 12.86vw;
+            height: 9.4vw;
+            position: absolute;
+            left: 12.33vw;
+            top: 44.86vw;
+        }
+        &--figure02{
+            width: 29.46vw;
+            position: absolute;
+            left: 33.8vw;
+            top: 49vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature02{
+            @include mx.bg('feature02_cordinate04.png');
+            width: 18.93vw;
+            height: 6.533vw;
+            position: absolute;
+            left: 33.8vw;
+            top: 43.26vw;
+        }
+        &--figure03{
+            width: 24.8vw;
+            position: absolute;
+            right: 9.2vw;
+            top: 49.2vw;
+            img{
+                width: 100%;
+            }
+        }
+        &--feature03{
+            @include mx.bg('feature03_cordinate04.png');
+            width: 14.6vw;
+            height: 8vw;
+            position: absolute;
+            right: 7.73vw;
+            top: 44vw;
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__bg01{
+            width: 580px;
+            height: 132px;
+            left: -67px;
+            top: 410px;
+        }
+        &__bg02{
+            width: 580px;
+            height: 132px;
+            left: -62px;
+            top: 434px;
+        }
+        &__star{
+            width: 35px;
+            height: 35px;
+            left: 25px;
+            top: 258px;
+        }
+        &__num{
+            margin: 0 auto 31px;
+            width: 97px;
+            height: 36px;
+        }
+        &__subname{
+            @include mx.fz(13);
+            margin: 0 auto 20px;
+        }
+        &__name{
+            width: 308px;
+            height: 122px;
+        }
+        &__cordinate{
+            &--figure01{
+                width: 103px;
+                left: 62px;
+                top: 241px;
+            }
+            &--feature01{
+                width: 62px;
+                height: 45px;
+                left: 59px;
+                top: 215px;
+            }
+            &--figure02{
+                width: 141px;
+                left: 162px;
+                top: 236px;
+            }
+            &--feature02{
+                width: 91px;
+                height: 32px;
+                left: 164px;
+                top: 208px;
+            }
+            &--figure03{
+                width: 119px;
+                right: 43px;
+                top: 235px;
+
+            }
+            &--feature03{
+                width: 70px;
+                height: 38px;
+                right: 40px;
+                top: 211px;
+            }
+        }
+    }
+}
+
+.swiperLine{
+    margin: 0 auto 9.73vw;
+    img{
+        width: 100%;
+        padding: 0 0 8vw;
+    }
+    .swiper-pagination-bullet {
+        width: 2.3vw;
+        height: 2.3vw;
+        margin: 0 2vw!important;
+    }
+    .swiper-pagination-bullet{
+        background-color: #e8bda7;
+        opacity: 1;
+
+    }
+    .swiper-pagination-bullet-active{
+        background-color: base.$RED;
+        opacity: 1;
+    }
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        margin: 0 auto 47px;
+        img{
+            padding: 0 0 38px;
+        }
+        .swiper-pagination-bullet {
+            width: 11px;
+            height: 11px;
+            margin: 0 9px   !important;
+        }
+    }
+}
+
+@media screen and (min-width: base.$BP) {
+    /* タブレット用レイアウト 600px以上の範囲に収めるデザインはこの中に記述 */
+}
+
+
+@media screen and (min-width: base.$PCW) {
+    /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+
+}
+
+#lineup{
+    .shop__links{
+        border-bottom: none;
+    }
+}

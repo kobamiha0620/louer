@@ -1,0 +1,142 @@
+@charset 'utf-8';
+@use 'reset';
+@use 'base';
+@use 'mixin' as mx;
+
+@use 'contents/top';
+@use 'contents/lineup';
+@use 'contents/headersp';
+@use 'contents/footer';
+
+body {
+    background: base.$BGPC;
+    margin: 0;
+    font-family: 'Work Sans', 'Outfit',sans-serif;
+    font-family: 'Noto Serif JP', serif;
+}
+
+// p {
+//     // mixin.@include fz(18);
+
+// }
+
+// スマホ設定（599px以下）
+
+
+.main{
+    width: 100vw;
+    background: base.$BG;
+    overflow: hidden;
+}
+
+
+.sp{
+    display: block;
+}
+.pc{
+    display: none;
+}
+
+
+
+@media screen and (min-width: base.$BP) {
+/* タブレット用レイアウト 600px以上の範囲に収めるデザインはこの中に記述 */
+
+}
+
+@media screen and (min-width: base.$PCW) {
+/* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+    body{
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .main{
+        width: 480px;
+        min-width: 480px;
+        margin: 40px 14px 40px 0;
+        float: right;
+        &__wrapper{
+            width: 1108px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        &__pc{
+            width: 484px;
+            height: 518px;
+            position: fixed;
+            top:calc(50% - 484px/2);
+            // left:calc(50% - 50px/2);
+            &--star{
+                font-size: 0;
+                margin: 92px auto 39px;
+                width: 33px;
+                display: block;
+            }
+            &--subttl{
+                @include mx.bg('sub_pctop.png');
+                width: 260px;
+                height: 19px;
+                margin: 0 auto 32px;
+            }
+            &--txt01{
+                @include mx.bg('txt01_poctop.png');
+                width: 158px;
+                height: 15px;
+                margin: 0 auto 12px;
+            }
+            &--txt02{
+                @include mx.bg('txt02_poctop.png');
+                width: 137px;
+                height: 14px;
+                margin: 0 auto 40px;
+            }
+            &--logo{
+                @include mx.bg('logo.png');
+                width: 258px;
+                height: 64px;
+                margin: 0 auto 20px;
+            }
+            &--blc{
+                display: flex;
+                justify-content: space-between;
+                width: 410px;
+                margin: 0 auto;
+                align-items: center;
+            }
+            &--txt03{
+                @include mx.bg('txtjp_pctop.png');
+                width: 311px;
+                height: 33px;
+            }
+            &--rotate{
+                position: absolute;
+                top: -10px;
+                right: 8px;
+                img{
+                    animation: rotate-anime 8s linear infinite;
+
+                }
+            }
+        }
+        &__pcinner{
+            position: relative;
+            border: solid 1px base.$BC;
+            background: #fbf7ef; 
+            width: 484px;
+            height: 518px;
+            margin: 0 calc(1108px - 484px) 0 0;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }   
+
+
+    }
+    .sp{
+        display: none;
+    }
+    .pc{
+        display: block;
+    }
+}
+

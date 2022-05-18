@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQTXH7Q');</script>
+<!-- End Google Tag Manager -->
+
+<!-- drawer.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+<!-- jquery & iScroll -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+
+<!-- drawer.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<%
+    if (typeof description === 'undefined')  description = 'placeholder';
+    if (typeof keywords === 'undefined') keywords = ['placeholder'];
+    if (typeof author === 'undefined') author = 'placeholder';
+    if (typeof title === 'undefined') title = 'LOUER';
+%>
+
+<meta charset="UTF-8">
+<meta name="description" content="<%= description %>">
+<meta name="keywords" content="<%= keywords.join(',') %>">
+<meta name="author" content="<%= author %>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title><%= title %></title>
+
+
+</head>
+

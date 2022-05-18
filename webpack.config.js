@@ -3,7 +3,7 @@ const path  = require('path');
 
 const TerserPlugin = require("terser-webpack-plugin");
 // MODE変数でmodeの値を設定する。
-const MODE = "development";
+const MODE = "production";
 // MODE変数がdevelopmentならsourceMapStatusをtrueにする。
 const sourceMapStatus = MODE === "development";
 
@@ -12,6 +12,8 @@ const HtmlWebpackPlugin    = require('html-webpack-plugin');
 const CopyWebpackPlugin   = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
+const LazyLoadWebpackPlugin = require('lazyload-webpack-plugin');
+
 module.exports = {
     //設定は絶対パスにて行う、デフォルト値はカレントディレクトリ
     //contextはデフォルトとなるディレクトの設定ができる。
@@ -37,8 +39,12 @@ module.exports = {
 
         //cleanプロパティを設定することにより、出力ファルダ内のファイルを全て削除してから、出力します。それによりゴミファイルが残らない
         clean: {
-            keep: /index.html/, // index.html をキープ（削除しない）
+          keep: /index.html/, // index.html をキープ（削除しない）
+          keep: /lineup.html/, // index.html をキープ（削除しない）
         },        
+      },
+      stats: {
+        children: true,
       },
     //最適化の設定。本番モードではtrueとなる
     optimization: {
@@ -121,6 +127,8 @@ module.exports = {
                     loader: "sass-loader",
                     options: {
                         sourceMap: sourceMapStatus,
+                        // Prefer `dart-sass`
+                        implementation: require.resolve("sass"),
                     }
                 }
               ]
@@ -134,6 +142,13 @@ module.exports = {
                   maxSize: 100 * 1024,
                 }
               }
+          },
+          {
+            test: /\.ejs$/,
+            use: [
+              "html-loader", 
+              "ejs-plain-loader"
+            ],
           }
        ]
       },
@@ -145,15 +160,28 @@ module.exports = {
                 filename: './css/[name].css',
             }),
 
+
             // html-webpack-pluginの設定
             new HtmlWebpackPlugin({
             // 対象のテンプレートを設定
-            template: `${__dirname}/src/index.html`,
+            template: `${__dirname}/src/ejs/index.ejs`,
             // 書き出し先
             filename: `${__dirname}/dist/index.html`,
             // ビルドしたjsファイルを読み込む場所。デフォルトはhead
             inject: 'head'
             }),
+            new HtmlWebpackPlugin({
+              // 対象のテンプレートを設定
+              template: `${__dirname}/src/ejs/lineup.ejs`,
+              // 書き出し先
+              filename: `${__dirname}/dist/lineup.html`,
+              // ビルドしたjsファイルを読み込む場所。デフォルトはhead
+              inject: 'head'
+              }),
+            // new LazyLoadWebpackPlugin({
+            //   // you can use other lazyload library which support the same API
+            //   lazyloadLib: 'https://LIB_URL',
+            // }),
             new CopyWebpackPlugin({
                 patterns: [
                   {
@@ -162,11 +190,9 @@ module.exports = {
                   }
                 ]
               }),
-  
-    ],
 
-      //buildの形式の設定が可能。productionは本番
-      mode: "development"
+  
+    ]
   }
 
 

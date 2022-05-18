@@ -1,0 +1,25 @@
+@use "base";
+
+@mixin fz($size: 16) {
+    font-size: ($size / 10) + rem;
+}
+
+@mixin bg($file){
+    background: url(base.$PATH + $file);
+    white-space: nowrap;
+    text-indent: -9999px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+@keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+    100%  {transform: rotate(360deg);}
+}

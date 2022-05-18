@@ -1,0 +1,156 @@
+@charset "utf-8";
+@use "../reset";
+@use "../base";
+@use '../mixin'as mx;
+
+
+
+// スマホ設定（599px以下）
+.nav {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 5%;
+        height: 78px;
+        border-bottom: solid 1px base.$BC;
+    }
+    &__menu{
+        padding: 10%;
+        li{
+            margin: 0 0 20px;
+            a{
+                display: flex;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: space-between;
+                font-family: 'Work Sans', 'Outfit',sans-serif;
+                color: base.$BC;
+                @include mx.fz(16);
+                font-weight: 300;
+                line-height: 1;
+                &:hover{
+                    text-decoration: none;
+                }
+                
+            }
+        }
+        &--arrow{
+            @include mx.fz(20);
+            font-weight: 100;
+            transform: scale(0.8, 1);
+
+        }
+    }
+    @media screen and (min-width: base.$PCW) {
+        &__header {
+
+            margin: 0 26px;
+        }
+    }
+
+}
+
+.header {
+
+    &__top {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 5%;
+        border-bottom: solid 1px base.$BC;
+    }
+
+    &__logo {
+        @include mx.bg('logo.png');
+        width: 89px;
+        height: 22px;
+        margin-top: 8px;
+    }
+
+    .drawer-nav {
+        width: 100vw;
+    }
+
+
+    @media screen and (min-width: base.$PCW) {
+        /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+        position: relative;
+        width: 480px;
+        display: block;
+        &__top {
+            margin: 0 26px;
+        }
+    
+        //drawermenu.
+        .drawer-hamburger {
+            right: 0;
+            top: 0;
+
+        }
+        .drawer-nav {
+            width: 480px;
+        }
+    }
+}
+
+.drawer-hamburger {
+    width: 24px;
+    padding: 24px 5vw;
+
+    span {
+        width: 100%;
+        height: 2px;
+        background: base.$BC;
+        display: inline-block;
+        transition: all .4s;
+        /*アニメーションの設定*/
+    }
+    @media screen and (min-width: base.$PCW) {
+        padding: 24px 26px;
+    }
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+    right: 0;
+
+    span.nth1 {
+        top: 20px;
+        left: 16px;
+        transform: translateY(6px) rotate(-30deg);
+    }
+
+    span.nth2 {
+        top: 32px;
+        left: 16px;
+        transform: translateY(-6px) rotate(30deg);
+    }
+}
+
+.drawer--right {
+    .drawer-nav {
+        background: base.$BG;
+        right: -100vw;
+    }
+
+    @media screen and (min-width: base.$PCW) {
+        .drawer-nav {
+            right: -500px;
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: base.$BP) {
+    /* タブレット用レイアウト 600px以上の範囲に収めるデザインはこの中に記述 */
+}
+
+
+
+@media screen and (min-width: base.$PCW) {
+    /* PC用レイアウト 1,025px以上の範囲に収めるデザインはこの中に記述 */
+
+}
