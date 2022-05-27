@@ -80,13 +80,12 @@
         width: 480px;
         display: block;
         &__top {
-            margin: 0 26px;
+            margin: 0 0 0 26px;
         }
     
         //drawermenu.
         .drawer-hamburger {
-            right: 0;
-            top: 0;
+            position: relative;
 
         }
         .drawer-nav {
@@ -137,11 +136,12 @@
     @media screen and (min-width: base.$PCW) {
         .drawer-nav {
             right: -500px;
+            position: absolute;
+            height: 100vh;
         }
     }
 
 }
-
 
 
 @media screen and (min-width: base.$BP) {

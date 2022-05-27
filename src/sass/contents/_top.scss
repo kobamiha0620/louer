@@ -71,7 +71,9 @@
         margin: 2vw 5vw 0;
 
         li {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 4px;
             width: 18vw;
             max-width: 18vw;
@@ -182,7 +184,7 @@
             font-weight: normal;
             line-height: 1;
             @include mx.fz(15);
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            font-family:  Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 
             b {
                 font-weight: bold;
@@ -261,8 +263,8 @@
 
         p {
             color: base.$BC;
-            font-weight: normal;
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            font-weight: 300;
+            font-family: 'Noto Sans JP', sans-serif;
         }
 
         img {
@@ -507,7 +509,7 @@
 
     &__name {
         color: base.$BG;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
         font-size: 3.46vw;
         line-height: 1;
         margin: 0 0 5.86vw;
@@ -515,7 +517,7 @@
 
     &__feature {
         color: base.$BG;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
         font-size: 4vw;
         line-height: 1.6;
         margin: 0 0 6vw;
@@ -556,6 +558,7 @@
         border: solid 1px #fbf8f0;
         border-radius: 30vw;
         justify-content: center;
+        align-items: center;
         width: 78vw;
         margin: 0 auto;
 
@@ -565,17 +568,15 @@
 
         &--txt {
             line-height: 1;
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
             @include mx.fz(15);
-
+            font-weight: 200;
         }
 
         &--arrow {
-            transform: scale(0.8, 1);
-            @include mx.fz(18);
-            font-weight: bold;
-            font-family: 'Work Sans';
-            line-height: 1;
+            @include mx.bg('arrow.png');
+            width: 13px;
+            height: 13px;
             display: inline-block;
             margin-left: 10px;
         }
@@ -586,7 +587,7 @@
     }
 
     &__clenz {
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 
         &--ttl {
             text-align: center;
@@ -659,7 +660,6 @@
 
     .swiper-slide {
         overflow: hidden;
-
         img {
             width: 100%;
             padding: 0 7.5vw;
@@ -670,13 +670,14 @@
         @include mx.bg('prev_clenz.png');
         width: 4.33vw;
         height: 4.33vw;
-
+        left: 0;
     }
 
     .swiper-button-next {
         @include mx.bg('next_clenz.png');
         width: 4.33vw;
         height: 4.33vw;
+        right: 0;
     }
 
     @media screen and (min-width: base.$PCW) {
@@ -970,20 +971,21 @@
             padding: 6vw 0;
             display: flex;
             p{
-                font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+                font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
                 color: base.$BC;
                 font-size: 4vw;
                 line-height: 1.4;
             }
         }
         &--ttl{
-            font-weight: bold;
+            font-weight: 500;
             width: 37.2vw;
             max-width: 37.2vw;
         }
         &--txt{
             width: 62.8vw;
             max-width: 62.8vw;
+            font-weight: 300;
         }
     }
     &__attention{
@@ -991,14 +993,14 @@
         padding: 7vw 5vw;
         &--ttl{
             font-weight: bold;
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
             color: base.$BC;
             @include mx.fz(18);
             line-height: 1;
             margin: 0 0 18px;
         }
         &--txt{
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+            font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
             color: base.$BC;
             text-indent: -1em;
             padding-left: 1em;
@@ -1072,7 +1074,7 @@
     &__name{
         @include mx.fz(16);
         margin: 0 auto 5.6vw;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
         font-weight: bold;
         text-align: center;
         color: base.$BC;
@@ -1080,7 +1082,7 @@
     }
     &__explain{
         color: base.$BC;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
         @include mx.fz(14);
         line-height: 1.86;
 
@@ -1122,8 +1124,9 @@
     padding: 6vw 5.3vw;
     a{
         word-break: break-all;
-
     }
+    
+
     &__ttl{
         padding: 6.66vw 0!important;
         font-family: 'Work Sans';
@@ -1170,6 +1173,7 @@
         &__ttl{
             padding: 14px 0!important;
         }
+
     }
 }
 .company{
@@ -1180,29 +1184,34 @@
 }
 
 .privacy{
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: Hiragino Sans, "ヒラギノ角ゴシック", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     color: base.$BC;
     @include mx.fz(14);
+    padding-right:8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #f4ecd9;
     display: none;
     &__blc{
         background: #f4ecd9;
         width: 100%;
-        padding: 6.66vw 5vw 0.1vw;
+        padding: 0 5vw 0.1vw;
     }
     &__ttl{
         @include mx.fz(16);
-        font-weight: bold;
+        font-weight: 500;
         color: base.$BC;
     }
     &__subttl{
         @include mx.fz(14);
-        font-weight: bold;
+        font-weight: 500;
         color: base.$BC;
         line-height: 1.6;
     }
     &__txt{
         @include mx.fz(14);
         color: base.$BC;
+        font-weight: 200;
         margin-bottom: 10px;
         line-height: 1.5;
     }
@@ -1212,6 +1221,7 @@
         color: base.$BC;
         margin-bottom: 10px;
         line-height: 1.5;
+        font-weight: 200;
     }
     &__con{
         margin: 5.6vw 0;
@@ -1224,22 +1234,45 @@
         @include mx.fz(14);
         padding-left: 1em;
         margin: 0 0 20px;
+        font-weight: 200;
+
     }
     &__dotted{
         text-indent: -1em;
         padding-left: 1em;
         line-height: 1.5;
         @include mx.fz(14);
+        font-weight: 200;
+    }
 
+    &__inner{
+        background: #f4ecd9;
+        overflow-y: scroll;
+        height: 66vw;
+        &::-webkit-scrollbar {
+            width: 2px;
+            background: #f4ecd9;
+        }
+        &::-webkit-scrollbar-track {
+            background: #faf5ea;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #71675b;
+        }
     }
     @media screen and (min-width: base.$PCW) {
         &__blc{
-            padding: 30px 20px 1px;
+            padding: 0 20px 1px;
         }
         &__con{
             margin: 26px 0;
         }
-        
+        &__nav{
+        }
+        &__inner{
+            height: 316px;
+
+        }
     }
 
 

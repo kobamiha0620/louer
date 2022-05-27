@@ -17,21 +17,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- drawer.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-<%
-    if (typeof description === 'undefined')  description = 'placeholder';
-    if (typeof keywords === 'undefined') keywords = ['placeholder'];
-    if (typeof author === 'undefined') author = 'placeholder';
-    if (typeof title === 'undefined') title = 'LOUER';
-%>
+
+
 
 <meta charset="UTF-8">
-<meta name="description" content="<%= description %>">
-<meta name="keywords" content="<%= keywords.join(',') %>">
-<meta name="author" content="<%= author %>">
+<meta name="description" content="<%= meta.description %>">
+<meta name="keywords" content="<%= meta.keywords %>">
+<meta name="author" content="<%= meta.author %>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title><%= title %></title>
+
+<meta property="og:url" content="https://www.louer.jp/" />
+<meta property="og:type" content="product" />
+<meta property="og:title" content="<%= meta.title %>" />
+<meta property="og:description" content="<%= meta.description %>" />
+<meta property="og:site_name" content="LOUER 公式" />
+<meta property="og:image" content="../img/ogp-B.png" />
+<meta property="og:locale" content="ja_JP"  />
+
+<link rel="icon" href="../img/favicon.ico" />
+
+
+<title><%= meta.title %></title>
 
 
 </head>
+
 

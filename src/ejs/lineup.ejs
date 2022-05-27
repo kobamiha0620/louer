@@ -1,8 +1,18 @@
 <!-- 変数名の設定 -->
-<% let pageId = 'lineup'; %>
-<%- include('./_header', { pageId: pageId }) %>
+<% 
+    let pages = {
+        keywords : 'LOUER,ロアー,ももち,牛江桃子,プロデュース,カラコン,カラーコンタクトレンズ,1day,ナチュラル,あか抜け,盛れる,透明感,抜け感,低含水レンズ,UVカット機能',
+        description: 'LOUERの1dayカラーコンタクトの商品情報です。MISS YOU BROWN(ミスユーブラウン)、HUG ME BEIGE(ハグミーベージュ)、LOVE CAMEL(ラブキャメル)、CHERISH PINK(チェリッシュピンク)の4色を取り揃えております。[DIA14.2mm/着色直径13.4mm～13.6mm/1day/10枚入り]',
+        author: 'ももち（牛江桃子）',
+        title: 'ラインナップ │ ももち（牛江桃子）プロデュースカラコン LOUER（ロアー）',
+        pageId: 'lineup'
+    };
+%>
 
-<body class="drawer drawer--right" id="<% if (pageId === 'lineup'){ %>lineup<% } else { %>newspage<% } %>">
+
+<%- include('./_header', { meta: pages }) %>
+
+<body class="drawer drawer--right" id="<% if (pages.pageId === 'lineup'){ %>lineup<% } else { %>newspage<% } %>">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQTXH7Q"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -10,11 +20,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="main__wrapper">
 
-        <%- include('./_mainpc', { pageId: pageId }) %>
+        <%- include('./_mainpc') %>
         <div class="main">
 
             <main>
-                <%- include('./_headersp', { pageId: pageId }) %>
+                <%- include('./_headersp') %>
 
 
                 <section class="lineuptop" id="lineuptop">
@@ -292,15 +302,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-                <%- include('./_explain', { pageId: pageId }) %>
+                <%- include('./_explain', { meta: pages  }) %>
 
 
-                <%- include('./_shop', { pageId: pageId }) %>
+                <%- include('./_shop', { meta: pages  }) %>
 
 
 
             </main>
-            <%- include('./_footer', { pageId: pageId }) %>
+            <%- include('./_footer') %>
         </div>
 
     </div>
