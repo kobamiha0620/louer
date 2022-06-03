@@ -1,4 +1,3 @@
-
 import Swiper from 'swiper/bundle'; // 全ての機能が入っている
 import ScrollReveal from 'scrollreveal'
 import '../node_modules/swiper/swiper-bundle.css';
