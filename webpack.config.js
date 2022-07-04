@@ -3,9 +3,9 @@ const path  = require('path');
 
 const TerserPlugin = require("terser-webpack-plugin");
 // MODE変数でmodeの値を設定する。
-const MODE = "development";
-// MODE変数がdevelopmentならsourceMapStatusをtrueにする。
-const sourceMapStatus = MODE === "development";
+const MODE = "production";
+// MODE変数がproductionならsourceMapStatusをtrueにする。
+const sourceMapStatus = MODE === "production";
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin    = require('html-webpack-plugin');
